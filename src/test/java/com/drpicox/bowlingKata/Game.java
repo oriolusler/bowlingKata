@@ -7,7 +7,6 @@ public class Game {
     private int currentRoll = 0;
 
     public void roll(int i) {
-        score += i;
         rolls[currentRoll++] = i;
     }
 
