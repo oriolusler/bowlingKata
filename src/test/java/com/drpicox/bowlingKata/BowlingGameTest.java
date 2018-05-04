@@ -15,6 +15,11 @@ public class BowlingGameTest {
         g = new Game();
     }
 
+    private void rollMany(int n, int pins) {
+        for (int i = 0; i < n; i++)
+            g.roll(pins);
+    }
+    
     @Test
     public void testGutterGame() throws Exception {
         rollMany(20, 0);
@@ -27,8 +32,5 @@ public class BowlingGameTest {
         assertEquals(20, g.score());
     }
 
-    private void rollMany(int n, int pins) {
-        for (int i = 0; i < n; i++)
-            g.roll(pins);
-    }
+
 }
